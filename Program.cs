@@ -1,4 +1,4 @@
-﻿using System.CodeDom.Compiler;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Collections;
 using System.ComponentModel;
@@ -47,9 +47,9 @@ class Solution
 {
     public static void Main(string[] args)
     {
-        //TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
-        /*int stringsCount = Convert.ToInt32(Console.ReadLine().Trim());
+        int stringsCount = Convert.ToInt32(Console.ReadLine().Trim());
 
         List<string> strings = new List<string>();
 
@@ -74,17 +74,6 @@ class Solution
         textWriter.WriteLine(String.Join("\n", res));
 
         textWriter.Flush();
-        textWriter.Close();*/
-        List<string> strings = new List<string>();
-        List<string> queries= new List<string>();
-        strings.Add("ab");
-        strings.Add("ab");
-        strings.Add("abc");
-        queries.Add("ab");
-        queries.Add("abc");
-        queries.Add("bc");
-        List<int> res = Result.matchingStrings(strings, queries);
-        Console.WriteLine(String.Join("\n", res));
-
+        textWriter.Close();
     }
 }
