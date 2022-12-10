@@ -27,15 +27,16 @@ class Result
     public static List<int> matchingStrings(List<string> strings, List<string> queries)
     {
         List<int> result = new List<int>();
-        foreach (var x in queries)
-            result.Add(0);
+        
         for(int i=0;i<queries.Count;i++)
-        {          
+        {
+            int count = 0;
             for (int j=0;j<strings.Count;j++)
             {
                 if (strings[j] == queries[i])
-                    result[i]++;
+                    count++;
             }
+            result.Add(count);
         }
 
         return result;
